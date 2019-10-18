@@ -119,10 +119,6 @@ function App() {
           </p>
         </Item>
         <Item>
-          <a href="http://jadaimola.it/">jadaimola.it</a>
-          <p>this I made for a friend's massage parlor</p>
-        </Item>
-        <Item>
           <a href="https://podcast.doddophonique.com">
             podcast.doddophonique.com
           </a>
