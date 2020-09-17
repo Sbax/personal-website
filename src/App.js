@@ -130,6 +130,19 @@ function App() {
             this I made to keep track of the coolest places I visit or want to
           </p>
         </Item>
+        <Item>
+          <a href="https://generanomi.maletta.space/">
+            generanomi.maletta.space
+          </a>
+          <p>
+            this I made for an upcoming italian roleplaying setting, it
+            generates random kind of names to set up stories
+          </p>
+        </Item>
+        <Item>
+          <a href="https://jadaimola.it/">jadaimola.it</a>
+          <p>this I made for a local massage therapist</p>
+        </Item>
       </Portfolio>
     </main>
   );
