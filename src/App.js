@@ -87,6 +87,9 @@ const Item = styled.article`
 `;
 
 function App() {
+  const sendBeamPipeEvent = ({ target }) =>
+    window.beampipe(`clicked: ${target.name}`);
+
   return (
     <main>
       <About id="about">
@@ -98,12 +101,44 @@ function App() {
         </p>
         <p>
           You can find me on{" "}
-          <a href="https://www.instagram.com/heysbax/">Instagram</a>,{" "}
-          <a href="https://www.linkedin.com/in/matteo-bacci-22418387">
+          <a
+            onClick={sendBeamPipeEvent}
+            name="github"
+            href="https://github.com/sbax"
+          >
+            Github
+          </a>
+          ,{" "}
+          <a
+            onClick={sendBeamPipeEvent}
+            name="instagram"
+            href="https://www.instagram.com/heysbax/"
+          >
+            Instagram
+          </a>
+          ,{" "}
+          <a
+            onClick={sendBeamPipeEvent}
+            name="linkedin"
+            href="https://www.linkedin.com/in/matteo-bacci-22418387"
+          >
             LinkedIn
           </a>
-          , <a href="http://telegram.me/sbaxxx">Telegram</a> or{" "}
-          <a data-mail="mb@cocaine.ninja" href="mailto:mb@cocaine.ninja">
+          ,{" "}
+          <a
+            onClick={sendBeamPipeEvent}
+            name="telegram"
+            href="http://telegram.me/sbaxxx"
+          >
+            Telegram
+          </a>{" "}
+          or{" "}
+          <a
+            data-mail="mb@cocaine.ninja"
+            onClick={sendBeamPipeEvent}
+            name="mail"
+            href="mailto:mb@cocaine.ninja"
+          >
             mail me
           </a>
         </p>
@@ -113,25 +148,45 @@ function App() {
       </About>
       <Portfolio id="portfolio">
         <Item>
-          <a href="https://baccanale.maletta.space">baccanale.maletta.space</a>
+          <a
+            onClick={sendBeamPipeEvent}
+            name="baccanale"
+            href="https://baccanale.maletta.space"
+          >
+            baccanale.maletta.space
+          </a>
           <p>
             this I made to store and search menus in a yearly local festival
           </p>
         </Item>
         <Item>
-          <a href="https://podcast.doddophonique.com">
+          <a
+            onClick={sendBeamPipeEvent}
+            name="doddophonique"
+            href="https://podcast.doddophonique.com"
+          >
             podcast.doddophonique.com
           </a>
           <p>this I made for a friend's podcast</p>
         </Item>
         <Item>
-          <a href="http://places.maletta.space">places.maletta.space</a>
+          <a
+            onClick={sendBeamPipeEvent}
+            name="places"
+            href="http://places.maletta.space"
+          >
+            places.maletta.space
+          </a>
           <p>
             this I made to keep track of the coolest places I visit or want to
           </p>
         </Item>
         <Item>
-          <a href="https://generanomi.maletta.space/">
+          <a
+            onClick={sendBeamPipeEvent}
+            name="generanomi"
+            href="https://generanomi.maletta.space/"
+          >
             generanomi.maletta.space
           </a>
           <p>
@@ -140,7 +195,13 @@ function App() {
           </p>
         </Item>
         <Item>
-          <a href="https://jadaimola.it/">jadaimola.it</a>
+          <a
+            onClick={sendBeamPipeEvent}
+            name="jada"
+            href="https://jadaimola.it/"
+          >
+            jadaimola.it
+          </a>
           <p>this I made for a local massage therapist</p>
         </Item>
       </Portfolio>
