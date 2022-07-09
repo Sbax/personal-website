@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { breakpoints, theme } from "../theme/theme";
 import { Container } from "./Container";
+import { Loader } from "./Loader";
 import Reveal from "./Reveal";
 
 const Title = styled.h1`
@@ -35,6 +36,20 @@ const Links = styled.section`
 `;
 
 function Main({ title, description }) {
+  const [fontLoaded, setFontLoaded] = useState(false);
+
+  document.fonts.ready.then(() => setFontLoaded(true));
+
+  if (!fontLoaded) {
+    return (
+      <Container>
+        <Title>
+          <Loader />
+        </Title>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <Title>{title}</Title>
