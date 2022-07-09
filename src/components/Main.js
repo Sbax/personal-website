@@ -54,6 +54,10 @@ function Main({ title, description }) {
             <Reveal>Github</Reveal>
           </a>
           <Reveal>, </Reveal>
+          <a name="itch" href="https://sbax.itch.io/">
+            <Reveal>Itch</Reveal>
+          </a>
+          <Reveal>, </Reveal>
           <a name="instagram" href="https://www.instagram.com/heysbax/">
             <Reveal>Instagram</Reveal>
           </a>
