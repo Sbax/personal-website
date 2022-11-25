@@ -6,7 +6,7 @@ import { theme } from "./theme/theme.js";
 
 function App() {
   const getAge = (year, month, day) => {
-    const ms = Date.now() - new Date(year, month, day);
+    const ms = Date.now() - new Date(year, month - 1, day);
     const ageDateTime = new Date(ms);
 
     return Math.abs(ageDateTime.getUTCFullYear() - 1970);
