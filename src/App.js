@@ -6,10 +6,18 @@ import { theme } from "./theme/theme.js";
 
 function App() {
   const getAge = (year, month, day) => {
-    const ms = Date.now() - new Date(year, month - 1, day);
-    const ageDateTime = new Date(ms);
+    const birthday = new Date(year, month - 1, day);
+    const today = new Date();
 
-    return Math.abs(ageDateTime.getUTCFullYear() - 1970);
+    const reachedBirthday =
+      today.getMonth() < birthday.getMonth() ||
+      (today.getMonth() === birthday.getMonth() &&
+        today.getDate() < birthday.getDate());
+
+    const age =
+      today.getFullYear() - birthday.getFullYear() + (reachedBirthday ? -1 : 0);
+
+    return age;
   };
 
   const title = "Matteo Bacci";
