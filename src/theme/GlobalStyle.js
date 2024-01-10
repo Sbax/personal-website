@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import theme from ".";
 import ipsFont from "../fonts/ips.woff";
-import { theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

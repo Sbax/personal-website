@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Main from "./components/Main.js";
 import GlobalStyle from "./theme/GlobalStyle";
-import { theme } from "./theme/theme.js";
+import theme from "./theme";
 
 function App() {
   const getAge = (year, month, day) => {

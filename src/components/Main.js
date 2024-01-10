@@ -4,6 +4,9 @@ import { breakpoints, theme } from "../theme/theme";
 import { Container } from "./Container";
 import { Loader } from "./Loader";
 import Reveal from "./Reveal";
+import Container from "./styles/Container";
+import Links from "./styles/LinksGrid";
+import { Subtitle, Title } from "./styles/Typography";
 
 const Title = styled.h1`
   text-align: center;

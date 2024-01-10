@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { breakpoints } from "../theme/theme";
+import { breakpoints } from "../../theme";
 
-export const Container = styled.main`
+const Container = styled.main`
   max-width: ${breakpoints.desktop};
   padding: 1rem;
   margin: auto;
@@ -19,3 +19,5 @@ export const Container = styled.main`
     margin-top: 1rem;
   }
 `;
+
+export default Container;
