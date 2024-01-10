@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Redirect, Route, Switch } from "wouter";
+import Extra from "./components/Extra.js";
 import Main from "./components/Main.js";
 import GlobalStyle from "./theme/GlobalStyle";
 import theme from "./theme";
@@ -45,7 +47,14 @@ function App() {
       </Helmet>
 
       <GlobalStyle />
-      <Main title={title} description={description} />
+      <Switch>
+        <Route
+          path="/"
+          component={() => <Main title={title} description={description} />}
+        />
+        <Route path="/more" component={Extra} />
+        <Route component={() => <Redirect to="/" />} />
+      </Switch>
     </>
   );
 }

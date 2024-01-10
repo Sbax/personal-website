@@ -1,47 +1,31 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { breakpoints, theme } from "../theme/theme";
-import { Container } from "./Container";
+import { Link, useLocation } from "wouter";
+import useKonami from "../utils/useKonami";
 import { Loader } from "./Loader";
 import Reveal from "./Reveal";
 import Container from "./styles/Container";
 import Links from "./styles/LinksGrid";
 import { Subtitle, Title } from "./styles/Typography";
 
-const Title = styled.h1`
-  text-align: center;
-  font-size: 2em;
-`;
+const Char = styled.span`
+padding: 0 .25em
+  opacity: 0.5;
 
-const Subtitle = styled.h2`
-  text-align: center;
-  font-size: 1.2em;
-
-  color: ${theme.grey};
-
-  > * + * {
-    margin-top: 0.25em;
+  &.active {
+    opacity: 1;
   }
-`;
-
-const Links = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  @media (min-width: ${breakpoints.tablet}) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  grid-gap: 1em;
-
-  flex-direction: column;
-  font-size: 1em;
-  padding: 1em;
 `;
 
 function Main({ title, description }) {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   document.fonts.ready.then(() => setFontLoaded(true));
+
+  const [, setLocation] = useLocation();
+  const { input } = useKonami(() => fontLoaded && setLocation("/more"));
+
+  const code = ["↑", "↑", "↓", "↓", "←", "→", "←", "→", "B", "A"];
 
   if (!fontLoaded) {
     return (
@@ -117,6 +101,18 @@ function Main({ title, description }) {
           (italian) name generator for spaghetti fantasy settings
         </div>
       </Links>
+
+      <Title>
+        {code.map((char, index) => (
+          <Char className={input.length >= index + 1 ? "active" : ""}>
+            {char}
+          </Char>
+        ))}
+      </Title>
+
+      <Subtitle>
+        <Link to="/more">see more</Link>
+      </Subtitle>
     </Container>
   );
 }
