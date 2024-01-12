@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "wouter";
+import { breakpoints } from "../theme";
 import useKonami from "../utils/useKonami";
 import { Loader } from "./Loader";
 import Reveal from "./Reveal";
@@ -9,11 +10,19 @@ import Links from "./styles/LinksGrid";
 import { Subtitle, Title } from "./styles/Typography";
 
 const Char = styled.span`
-padding: 0 .25em
+  padding: 0.25em;
   opacity: 0.5;
 
   &.active {
     opacity: 1;
+  }
+`;
+
+const DesktopOnly = styled.section`
+  display: none;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
   }
 `;
 
@@ -102,13 +111,15 @@ function Main({ title, description }) {
         </div>
       </Links>
 
-      <Title>
-        {code.map((char, index) => (
-          <Char className={input.length >= index + 1 ? "active" : ""}>
-            {char}
-          </Char>
-        ))}
-      </Title>
+      <DesktopOnly>
+        <Title>
+          {code.map((char, index) => (
+            <Char className={input.length >= index + 1 ? "active" : ""}>
+              {char}
+            </Char>
+          ))}
+        </Title>
+      </DesktopOnly>
 
       <Subtitle>
         <Link to="/more">see more</Link>
