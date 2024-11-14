@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-size: 20px;
+  @apply text-neutral h-full w-full;
+}
+
+.link-primary-bg {
+  @apply text-primary hover:bg-primary hover:text-neutral-content;
+}
