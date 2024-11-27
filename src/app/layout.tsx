@@ -1,4 +1,4 @@
-import getAge from "@/lib/getAge";
+import { getAge } from "@/lib/getAge";
 import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="black">
       <body className={`${ips.className}`}>
-        <main className="m-auto max-w-screen-lg">{children}</main>
+        <main className="m-auto p-4 max-w-screen-lg">{children}</main>
       </body>
     </html>
   );

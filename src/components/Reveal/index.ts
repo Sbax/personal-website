@@ -1,3 +1,3 @@
-import RevealSwitcher from "@/components/Reveal/RevealSwitcher";
+import { RevealSwitcher } from "@/components/Reveal/RevealSwitcher";
 
-export default RevealSwitcher;
+export const Reveal = RevealSwitcher;

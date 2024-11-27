@@ -1,4 +1,4 @@
-const getAge = () => {
+export const getAge = () => {
   const birthday = new Date(1992, 10, 16); // November 16, 1992 (month is zero-based)
   const today = new Date();
 
@@ -11,5 +11,3 @@ const getAge = () => {
     today.getFullYear() - birthday.getFullYear() + (reachedBirthday ? -1 : 0)
   );
 };
-
-export default getAge;

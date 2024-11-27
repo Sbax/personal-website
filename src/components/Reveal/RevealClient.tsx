@@ -11,7 +11,7 @@ interface RevealProps {
   delay?: number;
 }
 
-const RevealClient: React.FC<RevealProps> = ({
+export const RevealClient: React.FC<RevealProps> = ({
   children,
   characters = "█▓▒░█▓▒░█▓▒░<>/",
   exclude = [" ", "!"],
@@ -59,5 +59,3 @@ const RevealClient: React.FC<RevealProps> = ({
 
   return isClient ? displayText : children;
 };
-
-export default RevealClient;

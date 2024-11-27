@@ -1,9 +1,9 @@
-import Reveal from "@/components/Reveal";
+import { Reveal } from "@/components/Reveal";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Matteo Bacci | Projects",
+  title: "Projects | Matteo Bacci",
   description: "See my personal project portfolio.",
 };
 
@@ -14,10 +14,10 @@ export default function Projects() {
         <Reveal>RPG stuff</Reveal>
       </h1>
 
-      <section className="gap-2 grid grid-cols-2 mb-8">
+      <section className="gap-2 grid md:grid-cols-2 mb-8">
         <article>
           <a
-            className="link link-primary-bg"
+            className="link link-primary"
             href="https://generanomi.maletta.space/"
           >
             generanomi
@@ -26,37 +26,28 @@ export default function Projects() {
         </article>
 
         <article>
-          <a className="link link-primary-bg" href="https://ttg.maletta.space/">
+          <a className="link link-primary" href="https://ttg.maletta.space/">
             ttg
           </a>
           , (italian) character generator for Terror Target Gemini
         </article>
 
         <article>
-          <a
-            className="link link-primary-bg"
-            href="https://yokai.maletta.space/"
-          >
+          <a className="link link-primary" href="https://yokai.maletta.space/">
             yokai
           </a>
           , (italian) character generator for Yokai Hunters Society
         </article>
 
         <article>
-          <a
-            className="link link-primary-bg"
-            href="https://pergamene.oicn.icu/"
-          >
+          <a className="link link-primary" href="https://pergamene.oicn.icu/">
             pergamene gialle
           </a>
           , reference list for members of the OSR italian community
         </article>
 
         <article>
-          <a
-            className="link link-primary-bg"
-            href="https://cairn.maletta.space/"
-          >
+          <a className="link link-primary" href="https://cairn.maletta.space/">
             cairn
           </a>
           , (italian) character generator for Cairn
@@ -64,7 +55,7 @@ export default function Projects() {
 
         <article>
           <a
-            className="link link-primary-bg"
+            className="link link-primary"
             href="https://frontier-scum.maletta.space/"
           >
             frontier scum
@@ -77,10 +68,10 @@ export default function Projects() {
         <Reveal>Other stuff</Reveal>
       </h1>
 
-      <section className="gap-2 grid grid-cols-2 mb-8">
+      <section className="gap-2 grid md:grid-cols-2 mb-8">
         <article>
           <a
-            className="link link-primary-bg"
+            className="link link-primary"
             href="https://lostintokyo.maletta.space/"
           >
             lost in tokyo
@@ -90,7 +81,7 @@ export default function Projects() {
 
         <article>
           <a
-            className="link link-primary-bg"
+            className="link link-primary"
             href="https://rainbow.maletta.space/"
           >
             rainbows

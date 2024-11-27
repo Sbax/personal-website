@@ -1,0 +1,22 @@
+.mdxeditor {
+  --basePageBg: oklch(var(--b1));
+  --baseBase: oklch(var(--b1));
+
+  --baseBg: oklch(var(--b3));
+
+  --baseBgActive: oklch(var(--b2));
+
+  --baseBorderHover: oklch(var(--p) / 0.25);
+
+  --baseText: oklch(var(--p));
+  --baseTextContrast: oklch(var(--p));
+
+  --font-mono: inherit;
+  --font-body: inherit;
+
+  .mdxeditor-toolbar {
+    @apply rounded-none;
+  }
+
+  @apply input input-bordered h-auto p-0;
+}
