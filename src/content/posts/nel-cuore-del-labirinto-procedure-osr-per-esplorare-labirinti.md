@@ -34,7 +34,9 @@ Come prima cosa, ho censito le stanze essenziali per procedere, quelle che mi pi
 >
 > Se lɜ giocatricɜ si ingegnano, inventando un modo creativo per orientarsi nel labirinto, il tiro di **STANZA CHIAVE** sarà su 5-6, mentre quello di **STANZA CASUALE** su 2-4.
 >
-> Se una **STANZA CASUALE** viene estratta più volte, estrai invece una **STANZA CHIAVE**.Ogni volta che viene estratta una **STANZA CHIAVE**, questa viene rimossa dal pool dei risultati disponibili.
+> Se una **STANZA CASUALE** viene estratta più volte, estrai invece una **STANZA CHIAVE**.
+>
+> Ogni volta che viene estratta una **STANZA CHIAVE**, questa viene rimossa dal pool dei risultati disponibili.
 >
 > Dopo aver raccolto tutte le chiavi, la **STANZA CHIAVE** successiva sarà automaticamente l'uscita del labirinto.
 
