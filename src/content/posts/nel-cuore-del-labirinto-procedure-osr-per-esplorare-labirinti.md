@@ -30,7 +30,13 @@ Come prima cosa, ho censito le stanze essenziali per procedere, quelle che mi pi
 >
 > - **1.** Tira su **INCONTRI CASUALI**
 > - **2-5.** Tira su **STANZA CASUALE**
-> - **6.** Tira su **STANZA CHIAVE**Se lɜ giocatricɜ si ingegnano, inventando un modo creativo per orientarsi nel labirinto, il tiro di **STANZA CHIAVE** sarà su 5-6, mentre quello di **STANZA CASUALE** su 2-4.Se una **STANZA CASUALE** viene estratta più volte, estrai invece una **STANZA CHIAVE**.Ogni volta che viene estratta una **STANZA CHIAVE**, questa viene rimossa dal pool dei risultati disponibili.Dopo aver raccolto tutte le chiavi, la **STANZA CHIAVE** successiva sarà automaticamente l'uscita del labirinto.
+> - **6.** Tira su **STANZA CHIAVE**
+>
+> Se lɜ giocatricɜ si ingegnano, inventando un modo creativo per orientarsi nel labirinto, il tiro di **STANZA CHIAVE** sarà su 5-6, mentre quello di **STANZA CASUALE** su 2-4.
+>
+> Se una **STANZA CASUALE** viene estratta più volte, estrai invece una **STANZA CHIAVE**.Ogni volta che viene estratta una **STANZA CHIAVE**, questa viene rimossa dal pool dei risultati disponibili.
+>
+> Dopo aver raccolto tutte le chiavi, la **STANZA CHIAVE** successiva sarà automaticamente l'uscita del labirinto.
 
 Non è esattamente un pointcrawl e, anzi, forse ricorda di più le skill challenges introdotte in (_tuoni e saette in lontananza_) D\&D 4e. In sostanza, è richiesto che lɜ giocatricɜ riescano ad accumulare abbastanza successi sul tiro nel labirinto prima di **finire le risorse** o **morire male** negli incontri casuali.
 
