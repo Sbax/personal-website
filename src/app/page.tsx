@@ -3,9 +3,7 @@ import { Reveal } from "@/components/Reveal";
 import { getAge } from "@/lib/getAge";
 import Link from "next/link";
 
-const ONE_DAY = 86400;
-
-export const revalidate = ONE_DAY;
+export const revalidate = 86400; // one day
 
 export default function Home() {
   const age = getAge();
