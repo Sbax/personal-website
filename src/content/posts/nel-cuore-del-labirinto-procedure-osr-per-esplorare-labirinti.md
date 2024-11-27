@@ -18,21 +18,23 @@ Ovviamente, prima di tutto, ho cercato online, ma senza grande successo. Il sugg
 
 **Mesopotamian Death Cult** è una bella avventura, specialmente per il flavor, ma ha alcuni problemi di dungeon design:
 
-* L'uscita del labirinto è vincolata a tre oggetti che è possibile trovare solo in alcune stanze specifiche.
-* Uno di questi oggetti risulta introvabile senza passare da una quarta stanza del labirinto.
-* Non tutte le altre stanze hanno qualcosa di davvero interessante, così come i possibili incontri casuali: alcuni sono tiri salvezza contro morte non telegrafati.
+- L'uscita del labirinto è vincolata a tre oggetti che è possibile trovare solo in alcune stanze specifiche.
+- Uno di questi oggetti risulta introvabile senza passare da una quarta stanza del labirinto.
+- Non tutte le altre stanze hanno qualcosa di davvero interessante, così come i possibili incontri casuali: alcuni sono tiri salvezza contro morte non telegrafati.
 
 ## La procedura
 
 Come prima cosa, ho censito le stanze essenziali per procedere, quelle che mi piacevano di più e gli incontri casuali più adatti. Dopodiché, ho scritto questa procedura:
 
-> Per ogni turno nel labirinto i personaggi consumano risorse. Per spostarsi, tirano 1d6:- **1.** Tira su **INCONTRI CASUALI**
+> Per ogni turno nel labirinto i personaggi consumano risorse. Per spostarsi, tirano 1d6:
+>
+> - **1.** Tira su **INCONTRI CASUALI**
 > - **2-5.** Tira su **STANZA CASUALE**
 > - **6.** Tira su **STANZA CHIAVE**Se lɜ giocatricɜ si ingegnano, inventando un modo creativo per orientarsi nel labirinto, il tiro di **STANZA CHIAVE** sarà su 5-6, mentre quello di **STANZA CASUALE** su 2-4.Se una **STANZA CASUALE** viene estratta più volte, estrai invece una **STANZA CHIAVE**.Ogni volta che viene estratta una **STANZA CHIAVE**, questa viene rimossa dal pool dei risultati disponibili.Dopo aver raccolto tutte le chiavi, la **STANZA CHIAVE** successiva sarà automaticamente l'uscita del labirinto.
 
-Non è esattamente un pointcrawl e, anzi, forse ricorda di più le skill challenges introdotte in (*tuoni e saette in lontananza*) D\&D 4e. In sostanza, è richiesto che lɜ giocatricɜ riescano ad accumulare abbastanza successi sul tiro nel labirinto prima di **finire le risorse** o **morire male** negli incontri casuali.
+Non è esattamente un pointcrawl e, anzi, forse ricorda di più le skill challenges introdotte in (_tuoni e saette in lontananza_) D\&D 4e. In sostanza, è richiesto che lɜ giocatricɜ riescano ad accumulare abbastanza successi sul tiro nel labirinto prima di **finire le risorse** o **morire male** negli incontri casuali.
 
-Dalla loro parte hanno un po' di aiuto dalla procedura: se decidono di usare una tecnica come *seguire sempre lo stesso lato*, *srotolare un filo dietro di sé*, *segnare le pareti in cui sono passatɜ* o simili, verranno premiatɜ con il successo su 5-6. Se decidono di *mappare il percorso*, potremmo anche consentire di lasciarlɜ tornare sui propri passi a loro discrezione, sempre con il prezzo del consumo di risorse.
+Dalla loro parte hanno un po' di aiuto dalla procedura: se decidono di usare una tecnica come _seguire sempre lo stesso lato_, _srotolare un filo dietro di sé_, _segnare le pareti in cui sono passatɜ_ o simili, verranno premiatɜ con il successo su 5-6. Se decidono di _mappare il percorso_, potremmo anche consentire di lasciarlɜ tornare sui propri passi a loro discrezione, sempre con il prezzo del consumo di risorse.
 
 Nella tabella degli **incontri casuali**, ho anche fatto in modo che il risultato più alto sia invece una **stanza casuale**, così che l'avventura prosegua a un ritmo più incalzante.
 
@@ -60,7 +62,7 @@ In [The Gnomes of Levnec](https://www.drivethrurpg.com/en/product/110415/the-gno
 
 Si tirano tre dadi di diversa taglia: **Dove? (d8)**, **Cosa? (d6)**, **Strambo? (d4)**. Il risultato è la combinazione dei tre tiri, ma se vengono tirati **tre numeri uguali**, **due 6 o due 5**, o **18 totale**, il massimo possibile, il risultato varia ulteriormente.
 
-Questo tipo di tabella permetterebbe di avere un labirinto totalmente casuale dove incontri, stanze e oggetti chiave si mescolano tra loro. Usando le variazioni, potremmo poi inserire passaggi segreti, tesori o trappole che rendono *vivo* il labirinto e aggiungono ulteriori opzioni per lɜ giocatricɜ.
+Questo tipo di tabella permetterebbe di avere un labirinto totalmente casuale dove incontri, stanze e oggetti chiave si mescolano tra loro. Usando le variazioni, potremmo poi inserire passaggi segreti, tesori o trappole che rendono _vivo_ il labirinto e aggiungono ulteriori opzioni per lɜ giocatricɜ.
 
 ## Conclusione
 
