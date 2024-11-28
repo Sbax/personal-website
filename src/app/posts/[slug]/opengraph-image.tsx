@@ -13,7 +13,7 @@ export const contentType = "image/png";
 
 export default async function Image({ params }: { params: { slug: string } }) {
   const post = await loadPostData(params.slug);
-  const fontPath = path.resolve(process.cwd(), "./src/app/fonts/ips.woff");
+  const fontPath = path.resolve(process.cwd(), "./src/fonts/ips.woff");
   const fontData = fs.readFileSync(fontPath);
 
   return new ImageResponse(

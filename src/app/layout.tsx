@@ -1,4 +1,4 @@
-import { ips } from "@/app/fonts";
+import { ips } from "@/fonts";
 import { getAge } from "@/lib/getAge";
 import "./globals.css";
 

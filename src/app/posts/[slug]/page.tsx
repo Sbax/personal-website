@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import { Cousine } from "@/app/fonts";
+import { Cousine } from "@/fonts";
 import { Post, loadPostData } from "@/lib/posts";
 import { marked } from "marked";
 import { Metadata } from "next";

@@ -15,7 +15,7 @@ export const size = {
 };
 
 export async function createImage({ title, subtitle }: ImageProps) {
-  const fontPath = path.resolve(process.cwd(), "./src/app/fonts/ips.woff");
+  const fontPath = path.resolve(process.cwd(), "./src/fonts/ips.woff");
   const fontData = fs.readFileSync(fontPath);
 
   return new ImageResponse(
