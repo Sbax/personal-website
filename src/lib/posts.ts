@@ -11,6 +11,7 @@ export interface Post {
   tags: string[];
   title: string;
   content: string;
+  summary: string;
   creationDate?: string;
   lastModified?: string;
 }
@@ -53,6 +54,7 @@ export const loadPostData = async (slug: string): Promise<Post> => {
     tags: Array.isArray(data.tags) ? data.tags : [],
     title: data.title || "",
     content: content || "",
+    summary: data.summary || "",
     creationDate: data.creationDate || undefined,
     lastModified: data.lastModified || undefined,
   };
@@ -82,6 +84,7 @@ const writePostToFile = (post: Post, overwrite: boolean): PostResponse => {
     tags,
     title,
     content,
+    summary,
     creationDate = new Date().toISOString(),
   } = post;
 
@@ -97,6 +100,7 @@ const writePostToFile = (post: Post, overwrite: boolean): PostResponse => {
     uniqueTags.length > 0
       ? `tags: [${uniqueTags.map((tag) => `"${tag}"`).join(", ")}]`
       : null,
+    `summary: "${summary}"`,
     `creationDate: "${creationDate}"`,
     `lastModified: "${lastModified}"`,
   ]
@@ -120,6 +124,7 @@ const writePostToFile = (post: Post, overwrite: boolean): PostResponse => {
         tags,
         title,
         content,
+        summary,
         creationDate,
         lastModified,
       },

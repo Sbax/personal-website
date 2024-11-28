@@ -1,9 +1,16 @@
 import { LatestPosts } from "@/components/LatestPosts";
 import { Reveal } from "@/components/Reveal";
 import { getAge } from "@/lib/getAge";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export const revalidate = 86400; // one day
+
+export const metadata: Metadata = {
+  openGraph: {
+    type: "website",
+  },
+};
 
 export default function Home() {
   const age = getAge();

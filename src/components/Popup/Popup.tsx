@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
 import { usePopup } from "@/context/PopupContext";
+import { useCallback, useEffect, useState } from "react";
 
 export const Popup = () => {
   const { isOpen, message, type, hidePopup } = usePopup();
@@ -39,7 +39,7 @@ export const Popup = () => {
   return (
     <div
       onClick={handleClose}
-      className={`fixed bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out
+      className={`fixed z-10 bottom-4 left-1/2 transform -translate-x-1/2 px-6 py-4 text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out
         ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         } ${bgColor}`}

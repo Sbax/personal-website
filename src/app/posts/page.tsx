@@ -1,4 +1,5 @@
 import { PostCard } from "@/components/PostCard";
+import { Reveal } from "@/components/Reveal";
 import { getPosts } from "@/lib/posts";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -12,12 +13,21 @@ interface PostsPageProps {
 
 const POSTS_PER_PAGE = 8;
 
+const title = "Blog";
 const description =
   "ramblings on OSR, code, and the chaos in between – a space for scattered thoughts, half-formed ideas, and the occasional breakthrough";
 
 export const metadata: Metadata = {
-  title: "Blog | Matteo Bacci",
+  title,
   description,
+  openGraph: {
+    title,
+    description,
+    url: "/posts",
+  },
+  alternates: {
+    canonical: "/posts",
+  },
 };
 
 export default async function PostsPage({ searchParams }: PostsPageProps) {
@@ -61,7 +71,7 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
             <span className="text-primary underline">{currentTag}</span>{" "}
           </>
         ) : (
-          "posts"
+          <Reveal>Posts</Reveal>
         )}
       </h1>
 

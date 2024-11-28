@@ -1,16 +1,30 @@
+import { ips } from "@/app/fonts";
 import { getAge } from "@/lib/getAge";
-import { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-const ips = localFont({
-  src: "./fonts/ips.woff",
-});
+export async function generateMetadata() {
+  const baseUrl = process.env.BASE_URL;
 
-export const metadata: Metadata = {
-  title: "Matteo Bacci",
-  description: `Matteo Bacci, ${getAge()}yo developer from Imola, Italy. About, personal portfolio and blog.`,
-};
+  const title = {
+    template: "%s | Matteo Bacci",
+    default: "Matteo Bacci",
+  };
+  const description = `Matteo Bacci, ${getAge()}yo developer from Imola, Italy. About, personal portfolio and blog.`;
+
+  return {
+    title,
+    description,
+    authors: [{ name: "Matteo Bacci" }],
+    openGraph: {
+      locale: "en_GB",
+      type: "article",
+      title,
+      description,
+      siteName: "Matteo Bacci",
+    },
+    metadataBase: new URL(baseUrl || ""),
+  };
+}
 
 export default function RootLayout({
   children,

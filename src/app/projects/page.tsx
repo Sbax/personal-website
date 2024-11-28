@@ -2,9 +2,21 @@ import { Reveal } from "@/components/Reveal";
 import { Metadata } from "next";
 import Link from "next/link";
 
+const title = "Projects";
+const description =
+  "my personal project portfolio, code meets chaos and ideas find their footing";
+
 export const metadata: Metadata = {
-  title: "Projects | Matteo Bacci",
-  description: "See my personal project portfolio.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/projects",
+  },
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 export default function Projects() {

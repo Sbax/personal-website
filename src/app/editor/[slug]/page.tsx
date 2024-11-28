@@ -21,6 +21,7 @@ const Editor = ({ params }: EditorProps) => {
     tags,
     title,
     content,
+    summary,
   }: FormValues) => {
     const newSlug = createSlug(title);
 
@@ -31,6 +32,7 @@ const Editor = ({ params }: EditorProps) => {
       tags: tags.length ? tags.split(",").map((tag) => tag.trim()) : [],
       title,
       content,
+      summary,
     });
   };
 
@@ -42,11 +44,8 @@ const Editor = ({ params }: EditorProps) => {
         const postData = await loadPostData(slug);
 
         setInitialData({
-          date: postData.date,
-          language: postData.language,
+          ...postData,
           tags: postData.tags.join(", "),
-          title: postData.title,
-          content: postData.content,
         });
       } catch {
         router.push("/editor");

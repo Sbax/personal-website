@@ -1,10 +1,11 @@
 ---
+title: "Nel cuore del labirinto, procedure OSR per esplorare labirinti"
 date: "2024-11-27"
 language: "italian"
 tags: ["osr"]
-title: "Nel cuore del labirinto, procedure OSR per esplorare labirinti"
-creationDate: "2024-11-28T07:51:59.221Z"
-lastModified: "2024-11-28T07:51:59.221Z"
+summary: "Qualche procedura per trasformare i labirinti in sfide meno noiose per chi gioca e chi facilita"
+creationDate: "2024-11-28T08:23:48.940Z"
+lastModified: "2024-11-28T08:23:48.940Z"
 ---
 
 Qualche giorno fa, partecipando a [TPK! Total Party Kon](https://www.totalpartykon.it/), ho giocato **Mesopotamian Death Cult**, l'avventura allegata al [vinile omonimo di Vandalorum](https://heimatderkatastrophe.bandcamp.com/album/hdk-58-mesopotamian-death-cult).

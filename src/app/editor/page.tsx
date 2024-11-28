@@ -11,6 +11,7 @@ const Editor = () => {
     tags,
     title,
     content,
+    summary,
   }: FormValues) => {
     const slug = createSlug(title);
 
@@ -21,6 +22,7 @@ const Editor = () => {
       tags: tags.length ? tags.split(",") : [],
       title,
       content,
+      summary,
     });
   };
 

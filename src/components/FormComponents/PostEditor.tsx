@@ -4,6 +4,7 @@ import {
   InputField,
   LoadingButton,
   SelectField,
+  TextAreaField,
 } from "@/components/FormComponents";
 import { MarkdownEditor } from "@/components/MarkdownEditor";
 import { usePopup } from "@/context/PopupContext";
@@ -22,6 +23,7 @@ export interface FormValues {
   tags: string;
   title: string;
   content: string;
+  summary: string;
 }
 
 interface PostEditorProps {
@@ -41,6 +43,7 @@ export const PostEditor = ({
     tags: "",
     title: "",
     content: "",
+    summary: "",
     ...initialData,
   });
 
@@ -128,6 +131,13 @@ export const PostEditor = ({
           onChange={(content) => updateFormData("content", content)}
         />
       </div>
+
+      <TextAreaField
+        label="Summary"
+        value={formData.summary}
+        onChange={(value) => updateFormData("summary", value)}
+        placeholder="Type here..."
+      />
 
       <LoadingButton
         isLoading={isLoading}

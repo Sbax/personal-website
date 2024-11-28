@@ -1,10 +1,10 @@
 import { Reveal } from "@/components/Reveal";
-import { loadPostData } from "@/lib/posts";
+import { Cousine } from "@/app/fonts";
+import { Post, loadPostData } from "@/lib/posts";
 import { marked } from "marked";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import React from "react";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -14,11 +14,32 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await loadPostData(slug);
+  const { date, language, tags, title, summary } = await loadPostData(slug);
+
+  const localeMap = new Map<Post["language"], string>([
+    ["italian", "it_IT"],
+    ["english", "en_GB"],
+  ]);
+
+  const locale = localeMap.get(language);
+
+  const description =
+    summary || `Read this post titled "${title}" published on ${date}.`;
 
   return {
-    title: post.title,
-    description: `Read this post titled "${post.title}" published on ${post.date}.`,
+    title,
+    description,
+    keywords: [...tags],
+    openGraph: {
+      locale,
+      type: "article",
+      title,
+      description,
+      url: `/posts/${slug}`,
+    },
+    alternates: {
+      canonical: `/posts/${slug}`,
+    },
   };
 }
 
@@ -28,7 +49,14 @@ export default async function PostPage({ params }: PostPageProps) {
   try {
     const post = await loadPostData(slug);
 
-    const { title, date, tags, content } = post;
+    const { date, tags, language, title, content } = post;
+
+    const languageMap = new Map<Post["language"], string>([
+      ["italian", "it"],
+      ["english", "en"],
+    ]);
+
+    const lang = languageMap.get(language);
 
     return (
       <section className="space-y-4 max-w-xl">
@@ -64,8 +92,8 @@ export default async function PostPage({ params }: PostPageProps) {
         </section>
 
         <section
-          lang="it"
-          className="prose"
+          lang={lang}
+          className={`prose ${Cousine.className}`}
           dangerouslySetInnerHTML={{ __html: marked(content) }}
         />
       </section>
