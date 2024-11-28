@@ -1,14 +1,14 @@
 "use client";
 
-import { PostEditor } from "@/components/FormComponents/PostEditor";
+import { FormValues, PostEditor } from "@/components/FormComponents/PostEditor";
 import { createSlug } from "@/lib/createSlug";
-import { loadPostData, updatePost } from "@/lib/posts";
+import { Post, loadPostData, updatePost } from "@/lib/posts";
 import { useRouter } from "next/navigation";
 
 import React, { useEffect, useState } from "react";
 
 interface EditorProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: Post["slug"] }>;
 }
 
 const Editor = ({ params }: EditorProps) => {
@@ -16,33 +16,25 @@ const Editor = ({ params }: EditorProps) => {
   const { slug } = React.use(params);
 
   const handleUpdate = async ({
-    title,
-    tags,
     date,
+    language,
+    tags,
+    title,
     content,
-  }: {
-    title: string;
-    tags: string;
-    date: string;
-    content: string;
-  }) => {
-    const slug = createSlug(title);
+  }: FormValues) => {
+    const newSlug = createSlug(title);
 
     return await updatePost({
-      slug,
-      title,
-      tags: tags.split(",").map((tag) => tag.trim()),
+      slug: newSlug,
       date,
+      language,
+      tags: tags.length ? tags.split(",").map((tag) => tag.trim()) : [],
+      title,
       content,
     });
   };
 
-  const [initialData, setInitialData] = useState<{
-    title: string;
-    tags: string;
-    date: string;
-    content: string;
-  } | null>(null);
+  const [initialData, setInitialData] = useState<FormValues | null>(null);
 
   useEffect(() => {
     const fetchPostData = async () => {
@@ -50,9 +42,10 @@ const Editor = ({ params }: EditorProps) => {
         const postData = await loadPostData(slug);
 
         setInitialData({
-          title: postData.title,
-          tags: postData.tags.join(", "),
           date: postData.date,
+          language: postData.language,
+          tags: postData.tags.join(", "),
+          title: postData.title,
           content: postData.content,
         });
       } catch {

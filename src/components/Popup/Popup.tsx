@@ -1,30 +1,22 @@
-import { useCallback, useEffect, useState } from "react";
+"use client";
 
-export const Popup = ({
-  isOpen,
-  message,
-  type,
-  onClose,
-}: {
-  isOpen: boolean;
-  message: string;
-  type?: "success" | "error";
-  onClose: () => void;
-}) => {
+import { useEffect, useState, useCallback } from "react";
+import { usePopup } from "@/context/PopupContext";
+
+export const Popup = () => {
+  const { isOpen, message, type, hidePopup } = usePopup();
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClose = useCallback(() => {
     setIsVisible(false);
     setTimeout(() => {
-      onClose();
+      hidePopup();
     }, 300);
-  }, [onClose]);
+  }, [hidePopup]);
 
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 10);
+      setTimeout(() => setIsVisible(true), 10);
       const timeout = setTimeout(() => {
         handleClose();
       }, 5000);

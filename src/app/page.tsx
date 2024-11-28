@@ -9,7 +9,7 @@ export default function Home() {
   const age = getAge();
 
   return (
-    <section className="flex flex-col justify-center items-center space-y-2 min-h-screen text-center">
+    <section className="flex flex-col flex-1 justify-center items-center space-y-2 text-center">
       <h1 className="font-bold text-3xl text-primary">
         <Reveal>Matteo Bacci</Reveal>
       </h1>
@@ -55,8 +55,8 @@ export default function Home() {
 
       <section className="gap-4 grid md:grid-cols-2 text-left">
         <section className="flex flex-col justify-between space-y-4">
-          <h1>Some of my projects</h1>
-          <section className="text-left">
+          <h2>Some of my projects</h2>
+          <section className="flex flex-col flex-1 justify-between text-left">
             <article>
               <a
                 className="link link-primary"
@@ -94,16 +94,18 @@ export default function Home() {
             </Link>
           </h3>
         </section>
+
         <section className="flex flex-col justify-between space-y-4">
-          <h1>Some of my blog posts</h1>
+          <h2>Some of my blog posts</h2>
+          <section className="flex flex-col flex-1 justify-between text-left">
+            <LatestPosts count={3} />
 
-          <LatestPosts count={3} />
-
-          <h3 className="text-lg">
-            <Link href="/posts" className="link link-primary-bg">
-              see more /posts
-            </Link>
-          </h3>
+            <h3 className="text-lg">
+              <Link href="/posts" className="link link-primary-bg">
+                see more /posts
+              </Link>
+            </h3>
+          </section>
         </section>
       </section>
     </section>

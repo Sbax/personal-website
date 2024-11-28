@@ -5,19 +5,27 @@ import fs from "fs";
 import matter from "gray-matter";
 
 export interface Post {
-  title: string;
-  date: string;
-  tags: string[];
-  content: string;
   slug: string;
+  date: string;
+  language: "italian" | "english";
+  tags: string[];
+  title: string;
+  content: string;
   creationDate?: string;
   lastModified?: string;
 }
 
-interface PostResponse {
-  success: boolean;
-  error?: string;
+export interface PostResponseSuccess {
+  success: true;
+  post: Post;
 }
+
+export interface PostResponseError {
+  success: false;
+  error: string;
+}
+
+export type PostResponse = PostResponseSuccess | PostResponseError;
 
 const POSTS_PATH = "src/content/posts" as const;
 
@@ -39,11 +47,12 @@ export const loadPostData = async (slug: string): Promise<Post> => {
   const { data, content } = loadMarkdownFile(filePath);
 
   return {
-    title: data.title || "",
-    date: data.date || "",
-    tags: Array.isArray(data.tags) ? data.tags : [],
-    content: content || "",
     slug,
+    date: data.date || "",
+    language: data.language || "italian",
+    tags: Array.isArray(data.tags) ? data.tags : [],
+    title: data.title || "",
+    content: content || "",
     creationDate: data.creationDate || undefined,
     lastModified: data.lastModified || undefined,
   };
@@ -68,20 +77,26 @@ export const getPosts = async (): Promise<Post[]> => {
 const writePostToFile = (post: Post, overwrite: boolean): PostResponse => {
   const {
     slug,
-    title,
-    tags,
     date,
+    language = "italian",
+    tags,
+    title,
     content,
     creationDate = new Date().toISOString(),
   } = post;
+
   const filePath = getPostFilePath(slug);
 
   const lastModified = new Date().toISOString();
+  const uniqueTags = tags ? Array.from(new Set(tags)) : [];
 
   const metadata = [
     `title: "${title}"`,
     `date: "${date}"`,
-    `tags: [${tags.map((tag) => `"${tag}"`).join(", ")}]`,
+    `language: "${language}"`,
+    uniqueTags.length > 0
+      ? `tags: [${uniqueTags.map((tag) => `"${tag}"`).join(", ")}]`
+      : null,
     `creationDate: "${creationDate}"`,
     `lastModified: "${lastModified}"`,
   ]
@@ -96,7 +111,19 @@ const writePostToFile = (post: Post, overwrite: boolean): PostResponse => {
     }
 
     fs.writeFileSync(filePath, markdownContent, "utf8");
-    return { success: true };
+    return {
+      success: true,
+      post: {
+        slug,
+        date,
+        language,
+        tags,
+        title,
+        content,
+        creationDate,
+        lastModified,
+      },
+    };
   } catch (error) {
     return {
       success: false,

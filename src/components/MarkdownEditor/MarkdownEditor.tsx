@@ -1,5 +1,6 @@
 "use client";
 
+import { useDebounce } from "@/hooks";
 import {
   BlockTypeSelect,
   BoldItalicUnderlineToggles,
@@ -18,6 +19,7 @@ import {
   type MDXEditorProps,
 } from "@mdxeditor/editor";
 import "@mdxeditor/editor/style.css";
+import { useCallback } from "react";
 import "./MarkdownEditor.style.css";
 
 type MarkdownEditorProps = {
@@ -56,12 +58,29 @@ const plugins = [
   markdownShortcutPlugin(),
 ];
 
-export const MarkdownEditorClient = ({ ...props }: MarkdownEditorProps) => {
+export const MarkdownEditorClient = ({
+  onChange,
+  ...props
+}: MarkdownEditorProps) => {
+  const debouncedOnChange = useDebounce((string: string) => {
+    if (onChange) {
+      onChange(string);
+    }
+  }, 200);
+
+  const handleChange = useCallback(
+    (string: string) => {
+      debouncedOnChange(string);
+    },
+    [debouncedOnChange]
+  );
+
   return (
     <MDXEditor
       contentEditableClassName="prose max-w-full"
       markdown={props.value || ""}
       plugins={plugins}
+      onChange={handleChange}
       {...props}
     />
   );

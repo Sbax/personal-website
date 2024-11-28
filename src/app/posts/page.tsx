@@ -1,3 +1,4 @@
+import { PostCard } from "@/components/PostCard";
 import { getPosts } from "@/lib/posts";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -9,11 +10,14 @@ interface PostsPageProps {
   }>;
 }
 
-const POSTS_PER_PAGE = 10;
+const POSTS_PER_PAGE = 8;
+
+const description =
+  "ramblings on OSR, code, and the chaos in between – a space for scattered thoughts, half-formed ideas, and the occasional breakthrough";
 
 export const metadata: Metadata = {
   title: "Blog | Matteo Bacci",
-  description: "A few posts I've written",
+  description,
 };
 
 export default async function PostsPage({ searchParams }: PostsPageProps) {
@@ -24,7 +28,9 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
   const allPosts = await getPosts();
 
   const filteredPosts = currentTag
-    ? allPosts.filter((post) => post.tags.includes(currentTag))
+    ? allPosts.filter(
+        (post) => post.tags.includes(currentTag) || post.language === currentTag
+      )
     : allPosts;
 
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
@@ -34,42 +40,54 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
   );
 
   return (
-    <section className="flex flex-col space-y-2">
-      <section className="gap-6 grid md:grid-cols-2">
+    <section className="flex flex-col flex-1 space-y-2">
+      <header className="space-x-4 my-4">
+        <Link href="/" className="link link-primary-bg">
+          go to /
+        </Link>
+
+        {Boolean(currentTag) && (
+          <Link href="/posts" className="link link-primary-bg">
+            see all /posts
+          </Link>
+        )}
+      </header>
+
+      <p className="max-w-md">{description}</p>
+      <h1 className="mt-4 text-2xl text-primary">
+        {currentTag ? (
+          <>
+            posts tagged as{" "}
+            <span className="text-primary underline">{currentTag}</span>{" "}
+          </>
+        ) : (
+          "posts"
+        )}
+      </h1>
+
+      <section className="flex-1 gap-6 grid md:grid-cols-2">
         {paginatedPosts.map((post) => (
-          <article key={post.slug}>
-            <Link href={`/posts/${post.slug}`}>
-              <h2 className="font-bold text-lg link link-primary">
-                {post.title}
-              </h2>
-            </Link>
-            <p className="text-gray-500 text-sm">{post.date}</p>
-            <div className="space-x-2">
-              {post.tags.map((tag) => (
-                <span className="text-xs" key={tag}>
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          </article>
+          <PostCard key={post.slug} {...post} />
         ))}
       </section>
 
       {totalPages > 1 && (
-        <section className="flex justify-between items-center">
+        <section className="grid grid-cols-[auto,1fr,auto]">
           <Link
             href={{
               pathname: "/posts",
-              query: { tag: currentTag, page: Math.max(currentPage - 1, 1) },
+              query: {
+                tag: currentTag,
+                page: Math.max(currentPage - 1, 1),
+              },
             }}
-            className={`link link-primary-bg ${
-              currentPage === 1 ? "btn-disabled" : ""
-            }`}
+            className="link link-primary"
           >
             previous
           </Link>
-          <div>
-            Page {currentPage} of {totalPages}
+
+          <div className="flex justify-center col-start-2">
+            {currentPage}/{totalPages}
           </div>
           <Link
             href={{
@@ -79,9 +97,7 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
                 page: Math.min(currentPage + 1, totalPages),
               },
             }}
-            className={`link link-primary-bg ${
-              currentPage === totalPages ? "btn-disabled" : ""
-            }`}
+            className="link link-primary"
           >
             next
           </Link>

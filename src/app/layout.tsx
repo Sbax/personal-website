@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="black">
       <body className={`${ips.className}`}>
-        <main className="m-auto p-4 max-w-screen-lg">{children}</main>
+        <main className="flex flex-col m-auto p-4 max-w-screen-lg min-h-full">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -1,28 +1,25 @@
 "use client";
 
-import { PostEditor } from "@/components/FormComponents/PostEditor";
+import { FormValues, PostEditor } from "@/components/FormComponents/PostEditor";
 import { createSlug } from "@/lib/createSlug";
 import { createPost } from "@/lib/posts";
 
 const Editor = () => {
   const handleCreate = async ({
-    title,
-    tags,
     date,
+    language,
+    tags,
+    title,
     content,
-  }: {
-    title: string;
-    tags: string;
-    date: string;
-    content: string;
-  }) => {
+  }: FormValues) => {
     const slug = createSlug(title);
 
     return await createPost({
       slug,
-      title,
-      tags: tags.split(","),
       date,
+      language,
+      tags: tags.length ? tags.split(",") : [],
+      title,
       content,
     });
   };
