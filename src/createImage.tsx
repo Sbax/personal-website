@@ -1,6 +1,6 @@
+import fs from "fs";
 import { ImageResponse } from "next/og";
-
-export const runtime = "edge";
+import path from "path";
 
 type ImageProps = {
   title?: string;
@@ -15,9 +15,8 @@ export const size = {
 };
 
 export async function createImage({ title, subtitle }: ImageProps) {
-  const fontData = fetch(new URL("./app/fonts/ips.woff", import.meta.url)).then(
-    (res) => res.arrayBuffer()
-  );
+  const fontPath = path.resolve(process.cwd(), "./src/app/fonts/ips.woff");
+  const fontData = fs.readFileSync(fontPath);
 
   return new ImageResponse(
     (
