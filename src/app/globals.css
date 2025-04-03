@@ -5,11 +5,11 @@
 html,
 body {
   font-size: 20px;
-  @apply text-neutral h-full w-full;
+  @apply w-full h-full text-neutral;
 }
 
 .link-primary-bg {
-  @apply hover:text-primary hover:bg-inherit bg-primary text-neutral-content;
+  @apply bg-primary hover:bg-inherit text-neutral-content hover:text-primary;
 }
 
 .prose {
@@ -20,6 +20,12 @@ body {
   }
 
   a {
-    @apply link link-primary hover:text-neutral-content hover:bg-primary;
+    @apply hover:bg-primary hover:text-neutral-content link link-primary;
+  }
+
+  .footnotes {
+    p {
+      margin: 0;
+    }
   }
 }

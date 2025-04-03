@@ -12,13 +12,15 @@ Sto scrivendo questo post subito dopo aver dato un'occhiata, seppur sommaria, ai
 
 A differenza degli scorsi anni i **dungeon ricevuti** sono stati pubblicati **immediatamente** in modo da essere consultabili e disponibili per essere giocati, un cambiamento che ho apprezzato molto, mentre i dungeon dell'edizione 2024 erano stati pubblicati solo a febbraio 2025, nonostante il **voto del pubblico** fosse previsto tra i criteri di valutazione.
 
-Quest'anno, con un numero ridotto di consegne, il **_circolo dei vincitori_** (al maschile in quanto nome ufficiale) include solo **tre dungeon** e ~~commette il grave errore di non includere il mio!~~ al momento non è ancora statə annunciatə lə **vincitorə**.
+Quest'anno, con un numero ridotto di consegne, il **_circolo dei vincitori_**[^1] include solo **tre dungeon** e ~~commette il grave errore di non includere il mio!~~ al momento non è ancora statə annunciatə lə **vincitorə**.
+
+[^1]: al maschile in quanto nome ufficiale
 
 ## **Numeri non casuali**
 
 Nel **2022**, anno della prima edizione del contest al Play, i dungeon inviati erano stati ben **59**. L'anno successivo il numero è calato drasticamente, per stabilizzarsi attorno alla **ventina** per edizione.
 
-Il **2025** non fa eccezione: con soli **18 dungeon inviati**, è l'anno con la partecipazione più bassa. Emerge però un dato che mi ha sorpreso: il numero di **_non uomini_ partecipantɜ** è aumentato, superando persino la prima edizione e rappresentando **un terzo delle consegne**.
+Il **2025** non fa eccezione: con soli **18 dungeon inviati**, è l'anno con la partecipazione più bassa. Emerge però un dato che mi ha sorpreso: il numero di **_non uomini_ partecipanti** è aumentato, superando persino la prima edizione e rappresentando **un terzo delle consegne**.
 
 Questo è senz'altro un **segnale positivo**, che dimostra come l'hobby si sia quasi interamente liberato dalla stretta dei nerd rinchiusi in cantina al riparo della luce solare, per raggiungere un pubblico più ampio e variegato. Inoltre, evidenzia come uno stile di avventure più tradizionale possa ancora affascinare lɜ nuovɜ appassionatɜ del gioco.
 
@@ -32,7 +34,7 @@ Un'altra differenza sta nella **partecipazione**: il contest internazionale rice
 
 Le **maggiori differenze** si notano proprio nei dungeon vincitori. Entrambi i contest dovrebbero ricercare dungeon **compatti, giocabili e pieni di ispirazioni**, ma l'**OPD4P in questo delude**, premiando dungeon che **prioritizzano l'estetica o la stranezza dell'idea rispetto alla giocabilità e all'usabilità da parte deɜ master**.
 
-## Come si ~~valuta~~ scrive un dungeon
+## Come si ~~valuta~~ scrive un dungeon
 
 Credo sinceramente che i dungeon dalle nostre parti vengano generalmente relegati alla visione classica di **cripte noiose e polverose piene di mostri da uccidere e bottini da rubare**, annullando ogni discussione e analisi legata allo strumento.
 
@@ -44,7 +46,9 @@ Io trovo sia essenziale **dare un obiettivo ai personaggi**, una direzione preci
 
 I dungeon dovrebbero essere **dinamici**, con eventi che possono accadere **anche senza l'intervento deɜ giocatorɜ**. Presentare un mondo in movimento è essenziale perché l'impatto delle loro scelte sia significativo e lɜ spinga a portare in gioco la storia che si nasconde sotto la superficie.
 
-Per quanto riguarda **la mappa**, o meglio, il modo in cui le stanze si collegano tra loro, le stanze non dovrebbero essere isolate (**vero [Cripta della Maga](https://sbax.itch.io/la-cripta-della-maga)?**) e nemmeno avere un tragitto lineare, ma **intrecciarsi** attraverso passaggi segreti, scorciatoie e vicoli ciechi che permettano aɜ giocatorɜ di **scegliere che via intraprendere**, concedendo la possibilità di sbagliare e incappare in _quella maledetta spada parlante_ che hai messo nell'ultima stanza e ti ribalta la sessione.
+Per quanto riguarda **la mappa**, o meglio, il modo in cui le stanze si collegano tra loro, le stanze non dovrebbero essere isolate[^2] e nemmeno avere un tragitto lineare, ma **intrecciarsi** attraverso passaggi segreti, scorciatoie e vicoli ciechi che permettano aɜ giocatorɜ di **scegliere che via intraprendere**, concedendo la possibilità di sbagliare e incappare in _quella maledetta spada parlante_ che hai messo nell'ultima stanza e ti ribalta la sessione.
+
+[^2]: errore che ho commesso in [Cripta della Maga](https://sbax.itch.io/la-cripta-della-maga)
 
 Le **descrizioni delle stanze** dovrebbero essere scritte tenendo a mente che le leggerà lə master, così da **dare indicazioni pratiche** su come gestire le situazioni, **definire nel dettaglio trappole e tesori** interessanti che contribuiscano a caratterizzare il dungeon.
 

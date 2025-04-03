@@ -1,10 +1,17 @@
 import { Reveal } from "@/components/Reveal";
 import { Cousine } from "@/fonts";
 import { Post, loadPostData } from "@/lib/posts";
-import { marked } from "marked";
+
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+import rehypeStringify from "rehype-stringify";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+
+import { unified } from "unified";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -58,6 +65,15 @@ export default async function PostPage({ params }: PostPageProps) {
 
     const lang = languageMap.get(language);
 
+    const processedContent = await unified()
+      .use(remarkParse)
+      .use(remarkGfm)
+      .use(remarkRehype, {
+        footnoteLabel: language === "italian" ? "Note" : "Footnotes",
+      })
+      .use(rehypeStringify)
+      .process(content);
+
     return (
       <section className="space-y-4 max-w-xl">
         <section className="flex justify-between h-fit">
@@ -72,7 +88,7 @@ export default async function PostPage({ params }: PostPageProps) {
           )}
         </section>
 
-        <h1 className="font-bold text-2xl text-primary md:text-4xl">
+        <h1 className="font-bold text-primary text-2xl md:text-4xl">
           <Reveal>{title}</Reveal>
         </h1>
 
@@ -94,7 +110,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <section
           lang={lang}
           className={`prose ${Cousine.className}`}
-          dangerouslySetInnerHTML={{ __html: marked(content) }}
+          dangerouslySetInnerHTML={{ __html: processedContent.toString() }}
         />
       </section>
     );
