@@ -1,3 +1,4 @@
+import { AutoRefresh } from "@/components/AutoRefresh";
 import { ips } from "@/fonts";
 import { getAge } from "@/lib/getAge";
 import "./globals.css";
@@ -32,12 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="black">
-      <body className={`${ips.className}`}>
-        <main className="flex flex-col m-auto p-4 max-w-screen-lg min-h-full">
-          {children}
-        </main>
-      </body>
-    </html>
+    <AutoRefresh>
+      <html lang="en" data-theme="black">
+        <body className={`${ips.className}`}>
+          <main className="flex flex-col m-auto p-4 max-w-screen-lg min-h-full">
+            {children}
+          </main>
+        </body>
+      </html>
+    </AutoRefresh>
   );
 }
