@@ -60,23 +60,11 @@ Un concorso di dungeon design dovrebbe **incentivare la creazione di materiale i
 
 ## Il triangolo deɜ vincitorɜ
 
-<ol reversed>
-<li>
-
 [**Gardens of Daisy**](https://drive.google.com/file/d/1JOf-FJ5evrtn3fkuznXN_sW-fne2OVzg/view?usp=drive_link): l'ha scritto una mia amica e sono un po' di parte, ma in poche righe **dà un obiettivo ai personaggi**, definisce un'ambientazione omogenea, navigabile in **totale libertà** e mette a disposizione una **marea di spunti interessanti**;
-
-</li>
-<li>
 
 [**I Predatori del Fiume Nero**](https://drive.google.com/file/d/1JFwGzz-U136CDAL9Qu3t8hLJBPuhcejq/view?usp=drive_link): qua abbiamo **un gancio perfetto**, diversi accessi per esplorare il dungeon e **un rituale da fermare prima che le cose si mettano male**. C'è anche un villaggio intero che potrebbe diventare il punto di partenza per altre avventure del gruppo, gli si perdona anche che sia **l'ennesimo dungeon in un tempio pieno di cultisti**;
 
-</li>
-<li>
-
 [**Lo Strano Obelisco**](https://drive.google.com/drive/folders/1BkPK3dJVCIPKaVqPEa1REEhz-G1-yR9R): è originale, è pure **bello esteticamente**, pieno di **idee pazze e divertenti**, la grande pecca è che sia a tutti gli effetti un corridoio con le stanze che si presentano una dopo l'altra.
-
-</li>
-</ol>
 
 E ovviamente prima della prima posizione c'è [**Bologna Centrale, allontanarsi dalla linea gialla**](https://sbax.itch.io/bologna-centrale) il **mio dungeon**, **totalmente esente da difetti, diffidare dalle imitazioni!**
 
