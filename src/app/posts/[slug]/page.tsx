@@ -83,12 +83,6 @@ export default async function PostPage({ params }: PostPageProps) {
             <Link className="link link-primary-bg" href="/posts">
               see all /posts
             </Link>
-
-            {process.env.NODE_ENV === "development" && (
-              <Link className="link link-neutral" href={`/editor/${slug}`}>
-                /editor
-              </Link>
-            )}
           </section>
 
           <h1 className="font-bold text-primary text-2xl md:text-4xl">
