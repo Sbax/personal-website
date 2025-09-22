@@ -1,14 +1,14 @@
 ---
 title: "Disobbedienza digitale: l'accesso ai media digitali nell'era dei servizi"
-date: "2025-09-18"
+date: "2025-09-22"
 language: "italian"
 tags: ["tech"]
 summary: "Pensieri sparsi sull'accesso ai media digitali"
-creationDate: "2025-09-18T16:41:45.432Z"
-lastModified: "2025-09-19T13:35:06.706Z"
+creationDate: "2025-09-18T16:41:45Z"
+lastModified: "2025-09-22T07:05:02Z"
 ---
 
-Sono già diversi anni che il vinile è tornato di moda, e da poco meno anche le musicassette e persino gli iPod. Senza contare il ritorno dei pirati. Al di là del fascino nostalgico, c'è probabilmente anche una ricerca, più o meno consapevole, di **riappropriarsi dei contenuti che consumiamo**, uscire dal circolo vizioso delle piattaforme e allontanarsi dalla loro volatilità.
+Sono già diversi anni che il vinile è tornato di moda e da poco meno anche le musicassette e persino gli iPod. Senza contare il ritorno dei pirati. Al di là del fascino nostalgico, c'è probabilmente anche una ricerca, più o meno consapevole, di **riappropriarsi dei contenuti che consumiamo**, uscire dal circolo vizioso delle piattaforme e allontanarsi dalla loro volatilità.
 
 Ma ci sono davvero alternative valide e legali? E soprattutto, **come siamo arrivati a questo punto**?
 
@@ -16,11 +16,11 @@ Ma ci sono davvero alternative valide e legali? E soprattutto, **come siamo arri
 
 La legge italiana sul diritto d'autore è la **Legge 633 del 1941**, ancora in vigore oggi, nonostante sia stata scritta e promulgata durante il regime fascista. Questa legge ha esteso la censura a livello editoriale, rendendo sempre più capillare il sistema di controllo sulla cultura.
 
-Nella lotta tra libero accesso alla cultura e all'informazione, **le leggi sul diritto d'autore assicurano che lɜ cittadinɜ ci perdano sempre**.
+Nella lotta tra protezione del diritto d'autore e libero accesso alla cultura e all'informazione, **le leggi sul copyright assicurano che lɜ cittadinɜ ci perdano sempre**.
 
 Nel 2013 il **governo dell'Ecuador**[^1] ha richiesto e ottenuto la rimozione dai social di contenuti che ne criticavano l'operato.
 
-Nel 2020, **[Internet Archive](https://archive.org/)**, organizzazione no-profit che sta di fatto creando una **biblioteca digitale universale** in cui sono conservati gratuitamente contenuti di ogni tipo, è stato citato in giudizio da quattro editori statunitensi.
+Nel 2020 quattro editori statunitensi hanno citato in giudizio **[Internet Archive](https://archive.org/)**, organizzazione no-profit che sta di fatto creando una **biblioteca digitale universale** in cui sono conservati gratuitamente contenuti di ogni tipo.
 
 Da questa parte dell'Atlantico, a fine 2023 l'Italia ha oscurato **Anna's Archive**[^2], piattaforma che permetteva l'accesso libero a libri e pubblicazioni scientifiche.
 
@@ -53,7 +53,7 @@ Come ciliegina sulla torta, a febbraio 2025 **Amazon ha disabilitato la possibil
 
 Un esempio recente è **Willow**, serie del 2022 revival dell'omonimo film del 1988. Dopo risultati di audience deludenti, è stata **completamente rimossa dal catalogo**. Non esistendo una versione fisica in DVD o Blu-ray, oggi è **impossibile vederla legalmente**. Un altro caso in cui il danno è minimo per la piattaforma e pesa invece su **autorɜ e creatorɜ** che perderanno royalties e visibilità.
 
-Dando un'occhiata al catalogo si può notare come **manchino tantissimi corti** come _The Gallopin' Gaucho_, _Plane Crazy_, _Mickey's Follies_, _The Mad Doctor_, _Don Donald_, _Modern Inventions_, _Der Fuehrer's Face_ e _Runaway Brain_.
+Dando un'occhiata al catalogo si può notare che **manchino tantissimi corti** come _The Gallopin' Gaucho_, _Plane Crazy_, _Mickey's Follies_, _The Mad Doctor_, _Don Donald_, _Modern Inventions_, _Der Fuehrer's Face_ e _Runaway Brain_. Alcuni di questi sono stati spesso criticati o giudicati problematici.
 
 Lo stesso vale per film live action come **_Song of the South_**, criticato per la presenza di stereotipi razzisti. L'elenco diventa ancora più lungo se si mettono in conto **le modifiche e le censure** apportate alle opere, con **episodi mancanti, dialoghi modificati e scene tagliate**[^6].
 
@@ -88,7 +88,7 @@ Proprio per garantire questo diritto alla copia privata, paghiamo un **prezzo ma
 
 Per chi si stesse chiedendo se i DRM possano essere rimossi legalmente, la risposta è un netto **BOH**. Quello che è certo è che **non sia affatto semplice farlo**, specialmente nel caso di software o videogiochi.
 
-In particolare, riguardo i videogiochi, navighiamo in acque ancora più torbide. Che si tratti di una **console** o di un negozio come **Steam**, è praticamente sempre il buon cuore dei distributori a decidere per quanto tempo potremo continuare a giocare. Sempre più spesso, anche i giochi single player richiedono di rimanere online, così da verificare continuamente che stiamo rispettando i termini di utilizzo. E, ancora una volta, tutto questo avviene **a scapito deɜ consumatorɜ**.
+In particolare, riguardo i videogiochi, navighiamo in acque ancora più torbide. Che si tratti di una **console** o di un negozio come **Steam**, è praticamente sempre il buon cuore dei distributori a decidere per quanto tempo potremo continuare a giocare. Sempre più spesso, anche i giochi single player richiedono di rimanere online, così da verificare che stiamo rispettando i termini di utilizzo. E, ancora una volta, tutto questo avviene **a scapito deɜ consumatorɜ**.
 
 È infine il caso di parlare di **Denuvo**, forse il più popolare e controverso strumento di protezione in commercio. Funziona effettuando un **controllo in tempo reale** collegandosi continuamente a internet, con un **impatto enorme sulle prestazioni** del gioco originale. Al punto da portare diverse case di sviluppo a **rimuovere questa protezione** dopo i primi mesi dal lancio del gioco, una volta che il periodo critico per la pirateria è passato.
 
@@ -96,7 +96,7 @@ In particolare, riguardo i videogiochi, navighiamo in acque ancora più torbide.
 
 Prima di arrivare alle conclusioni è doveroso un disclaimer: **la pirateria è illegale** ~~non ruberesti mai un'auto~~, e questo post **non è un invito a salpare i sette mari**, ma piuttosto a **riflettere e prendere decisioni più consapevoli** su come fruire di media digitali.
 
-Se c'è una via d'uscita dal modello della **_cultura come servizio_**, passa per una forma di **disobbedienza digitale**. Non si tratta di infrangere la legge, ma di **scegliere attivamente piattaforme e portali** che mettono al centro l'accesso libero alla cultura, senza DRM e senza vincoli.
+Se c'è una via d'uscita dal modello della **_cultura come servizio_**, passa per una forma di **disobbedienza digitale**. Non parlo di infrangere la legge, ma di **scegliere attivamente piattaforme e portali** che mettono al centro l'accesso libero alla cultura, senza DRM e senza vincoli.
 
 Esistono già molte realtà che vanno in questa direzione: **[GOG](https://www.gog.com/)** per i videogiochi DRM-free, **[itch.io](https://itch.io/)** per il mondo indie, **[Bandcamp](https://bandcamp.com/)** e **[Qobuz](https://www.qobuz.com/)** per la musica, **[Liber Liber](https://liberliber.it/)** per i libri, o il già citato **[Internet Archive](https://archive.org/)** come enorme biblioteca digitale. Alcuni sono a pagamento, altri gratuiti, ma tutti condividono il principio per cui **ciò che acquisti è davvero tuo**.
 
