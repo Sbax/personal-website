@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@mdxeditor/editor": "^3.19.0",
-    "daisyui": "^4.12.14",
     "gray-matter": "^4.0.3",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",

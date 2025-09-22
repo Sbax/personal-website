@@ -109,7 +109,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         <section
           lang={lang}
-          className={`prose ${Cousine.className}`}
+          className={`prose prose-invert ${Cousine.className}`}
           dangerouslySetInnerHTML={{ __html: processedContent.toString() }}
         />
       </section>

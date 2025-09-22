@@ -4,28 +4,29 @@
 
 html,
 body {
-  font-size: 20px;
-  @apply w-full h-full text-neutral;
+  @apply text-neutral bg-background w-full h-full text-[20px];
+}
+
+a {
+  @apply text-primary hover:text-neutral underline;
 }
 
 .link-primary-bg {
-  @apply bg-primary hover:bg-inherit text-neutral-content hover:text-primary;
+  @apply bg-primary hover:bg-inherit text-background hover:text-primary;
 }
 
 .prose {
-  font-size: 18px;
+  @apply text-sm opacity-90 max-w-full;
+
   p {
-    text-align: justify;
-    hyphens: auto;
+    @apply text-justify hyphens-auto;
   }
 
   a {
-    @apply hover:bg-primary hover:text-neutral-content link link-primary;
+    @apply hover:bg-prose hover:text-background decoration-dotted;
   }
 
-  .footnotes {
-    p {
-      margin: 0;
-    }
+  .footnotes p {
+    @apply m-0;
   }
 }

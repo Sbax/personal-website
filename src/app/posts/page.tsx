@@ -64,7 +64,7 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
       </header>
 
       <p className="max-w-md">{description}</p>
-      <h1 className="mt-4 text-2xl text-primary">
+      <h1 className="mt-4 text-primary text-2xl">
         {currentTag ? (
           <>
             posts tagged as{" "}
@@ -75,7 +75,7 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
         )}
       </h1>
 
-      <section className="flex-1 gap-6 grid md:grid-cols-2">
+      <section className="gap-6 grid md:grid-cols-2">
         {paginatedPosts.map((post) => (
           <PostCard key={post.slug} {...post} />
         ))}
